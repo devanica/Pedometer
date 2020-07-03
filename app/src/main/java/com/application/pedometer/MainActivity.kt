@@ -23,9 +23,9 @@ class MainActivity : AppCompatActivity() {
         mStepCounter = StepCounter(object : StepCounter.StepDetector {
             override fun onStepDetected() {
                 steps += 1
-                tv_steps.text = steps.toString()
-                tv_kilometers.text = Util.calculateKilometers(steps) + "Km"
-                tv_calories.text = Util.calculateCalories(steps) + "Kcal"
+                tv_steps.text = steps.toString() + " Steps"
+                tv_kilometers.text = Util.calculateKilometers(steps) + " Km"
+                tv_calories.text = Util.calculateCalories(steps) + " Kcal"
                 registerMotionSensorListener()
             }
         })
