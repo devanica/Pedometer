@@ -1,6 +1,5 @@
 package com.application.pedometer
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.hardware.Sensor
 import android.hardware.SensorManager
@@ -25,8 +24,8 @@ class MainActivity : AppCompatActivity() {
             override fun onStepDetected() {
                 steps += 1
                 tv_steps.text = steps.toString()
-                tv_kilometers.text = Util.calculateKilometers(steps)
-                tv_calories.text = Util.calculateCalories(steps)
+                tv_kilometers.text = Util.calculateKilometers(steps) + "Km"
+                tv_calories.text = Util.calculateCalories(steps) + "Kcal"
                 registerMotionSensorListener()
             }
         })
